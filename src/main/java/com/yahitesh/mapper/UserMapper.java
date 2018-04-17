@@ -5,12 +5,15 @@ import com.yahitesh.model.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
+import org.mapstruct.factory.Mappers;
 
 /**
  * Created by yahitesh on 17/4/18.
  */
-@Mapper
+@Mapper(uses = {AddressMapper.class})
 public interface UserMapper {
+
+    public static final UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
     @Mappings({
             @Mapping(source = "userId", target = "id"),

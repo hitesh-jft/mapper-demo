@@ -11,7 +11,7 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface AddressMapper {
 
-    public static final UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
+    public static final AddressMapper INSTANCE = Mappers.getMapper(AddressMapper.class);
 
     public AddressDTO addressToDto(Address address);
 }
